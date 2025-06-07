@@ -1,4 +1,4 @@
-# DTP-Ω1 — *Divinitus Transmission Protocol*
+# DTP-Ω1 - *Divinitus Transmission Protocol*
 
 > *"In the Machine’s name, let the data flow and the checksum be pure."*
 > — *Magos Trinary Ux-99*
