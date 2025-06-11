@@ -86,6 +86,46 @@
 * Bindable to custom automation daemons for server-side rite enforcement
 * Compatible with ModOS, CogitOS, and Arch-Firmware nodes (v9 and above)
 
+## Compilation & Usage
+
+### Requirements:
+- C compiler (MSVC, GCC, or Clang)
+- CMake 3.10+
+
+### Build (Linux/macOS):
+```sh
+mkdir build && cd build
+cmake ..
+make
+```
+
+### Build (Windows with CMake/Visual Studio):
+```sh
+cmake -S . -B build
+cmake --build build --config Release
+```
+
+### Run
+
+**Server Mode:**
+```sh
+./dtp server [port] [originID]
+# Example:
+./dtp server 4242 0xAABB
+```
+
+**Client Mode:**
+```sh
+./dtp client [host] [port] [originID] [destID]
+# Example:
+./dtp client 127.0.0.1 4242 0xBEEF 0xAABB
+```
+
+### Input via stdin (optional):
+```sh
+echo "client 127.0.0.1 4242 0xBEEF 0xAABB" | ./dtp
+```
+
 ## Warnings
 
 * Improper checksum or malformed headers will result in **automatic purge**
